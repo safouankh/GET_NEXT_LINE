@@ -6,13 +6,13 @@
 /*   By: sael-kha <sael-kha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 12:34:51 by sael-kha          #+#    #+#             */
-/*   Updated: 2024/11/30 15:32:03 by sael-kha         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:59:15 by sael-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*gbed_text(int fd, char *text)
+static char	*gbed_text(int fd, char *text)
 {
 	int		bytes;
 	char	*buffer;
@@ -33,7 +33,7 @@ char	*gbed_text(int fd, char *text)
 	return (text);
 }
 
-char	*gbed_line(char *text)
+static char	*gbed_line(char *text)
 {
 	int		i;
 	char	*line;
@@ -60,7 +60,7 @@ char	*gbed_line(char *text)
 	return (line);
 }
 
-char	*update_text(char *text)
+static char	*update_text(char *text)
 {
 	int		i;
 	char	*new_text;

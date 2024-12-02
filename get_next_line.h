@@ -6,7 +6,7 @@
 /*   By: sael-kha <sael-kha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 12:34:45 by sael-kha          #+#    #+#             */
-/*   Updated: 2024/11/20 13:31:48 by sael-kha         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:59:21 by sael-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,5 @@ char	*get_next_line(int fd);
 char	*strjoin(char *s1, char *s2);
 int		is_on_str(char *str, char c);
 char	*check(void);
-char	*gbed_line(char *text);
-char	*update_text(char *text);
-char	*gbed_text(int fd, char *text);
 
 #endif
