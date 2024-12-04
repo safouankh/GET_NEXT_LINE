@@ -6,7 +6,7 @@
 /*   By: sael-kha <sael-kha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 12:34:51 by sael-kha          #+#    #+#             */
-/*   Updated: 2024/12/02 16:59:15 by sael-kha         ###   ########.fr       */
+/*   Updated: 2024/12/04 16:10:31 by sael-kha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ static char	*gbed_text(int fd, char *text)
 	while (bytes)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
+		if (bytes == -1)
+		{
+			free(text);
+			free(buffer);
+			return (NULL);
+		}
 		buffer[bytes] = '\0';
 		text = strjoin(text, buffer);
 		if ((is_on_str(buffer, '\n')) == 1)
